@@ -1298,11 +1298,11 @@ section,
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 20px;
-  text-align: center;
   color: var(--primary, #31353d);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
 
 }
 .personas {
@@ -1366,8 +1366,8 @@ section,
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px; /* space between images */
-  flex-wrap: wrap; /* makes it responsive on small screens */
+  gap: 40px; /* space between items */
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -1378,12 +1378,24 @@ section,
 }
 
 .client-item img {
-  max-width: 1620px;
-  height: auto;
+  width: 320px;       /* 👈 Control the image size */
+  height: auto;       /* keep aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.client-item img:hover {
+  transform: scale(1.05); /* optional hover zoom */
 }
 
 .client-text {
   margin-top: 10px;
   font-size: 1rem;
   color: #333;
+}
+.client-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+  text-align: center;
 }
