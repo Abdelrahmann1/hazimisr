@@ -1399,3 +1399,47 @@ section,
   line-height: 1.4;
   text-align: center;
 }
+
+
+
+
+.btn-register-out-side {
+  display: inline-block;
+  background: linear-gradient(135deg, #c81e2c, #e23b4b);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(200, 30, 44, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+
+.btn-register-out-side:hover {
+  background: linear-gradient(135deg, #e23b4b, #c81e2c);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(200, 30, 44, 0.45);
+  color: #fff;
+}
+.custom-register-form .btn-register-out-side {
+  margin-top: 10%;
+  background: linear-gradient(135deg, #c81e2c, #e23b4b);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.custom-register-form .btn-register-out-side:hover {
+  background: linear-gradient(135deg, #e23b4b, #c81e2c);
+  transform: translateY(-2px);
+}
