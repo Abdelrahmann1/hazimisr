@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       console.log('Modal is already open, skipping show().');
     }
-  }, 5000); // 5000ms = 5 seconds
+  }, 7000); // 5000ms = 5 seconds
 });
 
 
@@ -24,36 +24,25 @@ document.addEventListener('DOMContentLoaded', function () {
 async function handleSubmit(e, sheet) {
   e.preventDefault();
   const form = e.target; // The form element
-  const name = form.name.value.trim(); 
-  const phone = form.phone.value.trim();
-  const email = form.email.value.trim(); // 👈 هنا أضفنا الإيميل
+  const name = form.name.value.trim(); // Assuming your input has name="name"
+  const phone = form.phone.value.trim(); // Assuming your input has name="phone"
+  const email = form.email.value.trim(); // Assuming your input has name="phone"
 
   if (form.project) {
-    const project = form.project.value.trim(); 
-    if (project != "none") {
-      sheet = project;
-    } else {
-      console.log("none");
-    }
-  } else {
-    console.log("errorall");
-  }
-
-  // ✅ Validate inputs
-  if (!name || !phone || !email) {
-    showAlert("الرجاء إدخال الاسم ورقم الهاتف والبريد الإلكتروني.", "warning");
+      const project = form.project.value.trim(); // Assuming your input has name="phone"
+      if (project != "none") {
+          sheet = project;
+      }else{
+          console.log("none");
+      }
+  }else
+  // // Validate inputs
+  if (!name || !phone  || !email) {
+    showAlert("الرجاء إدخال الاسم ورقم الهاتف و البريد الالكتروني.", "warning");
     return;
   }
-
-  // ✅ Simple email format check
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email)) {
-    showAlert("الرجاء إدخال بريد إلكتروني صالح.", "warning");
-    return;
-  }
-
-  console.log(name, phone, email, sheet);
-
+  // console.log(name, phone,sheet);
+  
   // Show progress bar
   const progressContainer = document.getElementById("preloader");
   progressContainer.classList.remove("d-none");
@@ -67,20 +56,23 @@ async function handleSubmit(e, sheet) {
       body: new URLSearchParams({
         name: name,
         phone: phone,
-        email: email, // 👈 أرسل الإيميل كمان
+        email: email,
         compound: sheet
       })
     });
 
     const result = await response.json();
     if (result.success) {
-      form.name.value = "";
-      form.phone.value = "";
-      form.email.value = ""; // 👈 امسح الإيميل بعد الإرسال
-      window.location.href = 'thank_you.html';
+      name.value = "";
+      phone.value = "";
+      email.value = "";
+
+        window.location.href = 'thank_you.html';
+
     } else {
       throw new Error(result.error || "Submission failed");
-      progressContainer.classList.add('hidden');
+        progressContainer.classList.add('hidden');
+
     }
   } catch (error) {
     console.error("Error:", error);
@@ -91,7 +83,6 @@ async function handleSubmit(e, sheet) {
     progressContainer.classList.add('hidden');
   }
 }
-
 function showAlert(message, type) {
   const alertContainer = document.getElementById("alertContainer");
 

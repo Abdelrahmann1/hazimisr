@@ -1,15 +1,16 @@
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Tajawal", sans-serif;
+  --heading-font: "Tajawal", sans-serif;
+  --nav-font: "Tajawal", sans-serif;
 }
+
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #151515; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ffc451; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #c81e2c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #312f2f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -17,11 +18,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: rgba(255, 255, 255, 0.905);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffc451; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #c81e2c; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffc451; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #c81e2c; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -879,7 +880,7 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 56px;
+  font-size: 45px;
   font-weight: 700;
   font-family: var(--nav-font);
 }
@@ -1009,8 +1010,8 @@ section,
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   opacity: 1;
   background-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
@@ -1166,27 +1167,27 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 
-
 .btn-register {
   display: inline-block;
-  background: linear-gradient(135deg, #FFD15C, #FFB400);
-  color: #31353d;
+  background: linear-gradient(135deg, #c81e2c, #e23b4b);
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
   padding: 14px 36px;
   border-radius: 50px;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(200, 30, 44, 0.3);
   transition: all 0.3s ease;
   text-align: center;
 }
 
+
 .btn-register:hover {
-  background: linear-gradient(135deg, #FFB400, #FFD15C);
+  background: linear-gradient(135deg, #e23b4b, #c81e2c);
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  color: #000;
+  box-shadow: 0 6px 18px rgba(200, 30, 44, 0.45);
+  color: #fff;
 }
 
 /* Section Wrapper */
@@ -1275,8 +1276,8 @@ section,
 /* Submit Button */
 .custom-register-form .btn-register {
   margin-top: 10%;
-  background: linear-gradient(135deg, #FFD15C, #FFB400);;
-  color: black;
+  background: linear-gradient(135deg, #c81e2c, #e23b4b);
+  color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 14px 40px;
@@ -1288,9 +1289,10 @@ section,
 }
 
 .custom-register-form .btn-register:hover {
-  background:linear-gradient(135deg, #FFD15C, #FFB400);/* Slightly lighter shade */
+  background: linear-gradient(135deg, #e23b4b, #c81e2c);
   transform: translateY(-2px);
 }
+
 /* Form Title */
 .custom-register-form .form-title {
   font-size: 1.5rem;
@@ -1298,6 +1300,10 @@ section,
   margin-bottom: 20px;
   text-align: center;
   color: var(--primary, #31353d);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
 }
 .personas {
   padding: 80px 0;
@@ -1330,7 +1336,7 @@ section,
   font-size: 32px;
   font-weight: bold;
   display: block;
-  color: #FFD15C; /* لون البراند */
+  color: #c81e2c; /* لون البراند */
   margin-bottom: 10px;
 }
 .icon-box h3 a {
@@ -1352,7 +1358,32 @@ section,
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #FFD15C, #FFB400);
+  background: linear-gradient(135deg, #c81e2c, #c81e2c);
   margin: 10px auto 0 auto;
   border-radius: 2px;
+}
+.clients-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px; /* space between images */
+  flex-wrap: wrap; /* makes it responsive on small screens */
+  text-align: center;
+}
+
+.client-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-item img {
+  max-width: 1620px;
+  height: auto;
+}
+
+.client-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
 }
